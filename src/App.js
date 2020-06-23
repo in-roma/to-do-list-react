@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from './components/Header'
+import Header from './components/Header';
+import Taskfield from './components/Taskfield';
 
 class App extends React.Component {
 
@@ -8,6 +9,8 @@ class App extends React.Component {
         return (
             <React.Fragment>
                 <Header />
+                <Taskfield />
+
             </React.Fragment>
         );
     }

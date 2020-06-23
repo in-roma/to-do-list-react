@@ -7,7 +7,6 @@ class Header extends React.Component {
         </div>;
     }
 }
- 
 export default Header;                
 
 
