@@ -1,3 +1,125 @@
+
 body {
-    background-color: blue($color: #3b97d5);
+    background-color: $color-background;
 }
+
+.logo {
+    width: 100vw;
+    height: auto;
+    @include flex-row-center;
+    margin-top: 5.6rem;
+}
+
+.add-to-section {
+    width: 100vw;
+    height: auto;
+    @include flex-row-center;
+}
+
+.add-todo {
+    width: 82.8rem;
+    height: 88px;
+    background-color: white;
+    margin-top: 13.2rem;
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-input {
+    width: 68.4rem;
+    height: auto;
+}
+
+.text-input input{
+    width: 68.4rem;
+    @include font-project;
+    border: none;
+    @include margin-left;
+    outline-style: none;
+}
+
+::placeholder {
+   font-style: italic;
+   font-weight: 100;
+   color: rgba(0, 0, 0, 0.3);
+  }
+
+.underline {
+    width: 68.4rem;
+    height: 1px;
+    background-color: $color-lines;
+    margin-top: 2px;
+    @include margin-left;
+}
+
+.add-todo button, .add-todo button:active {
+    border: none;
+    background-color: none;
+    outline-style: none;
+}
+
+.buttonAdd {
+    margin-right: 21px;
+}
+.tasks {
+    width: 100vw;
+    @include flex-column-center;
+}
+
+.divResult {
+    position: relative;
+    width: 82.8rem;
+    height: 8.8rem;
+    margin-top: 2.2rem;
+    background-color: white;
+    border: 1px rgba(0, 0, 0, 0.05) solid;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
+    border-Radius: 8px;
+    display: flex;
+    align-Items: center;
+}
+
+.button-delete {
+    position: absolute;
+    right: 31px;
+    width: 12px;
+    height: 12px;
+    background-image: url(./public/img/delete-button.svg);
+    border: none;
+    background-color: none;
+    outline-style: none;
+}
+
+.tasksText {
+    @include font-project;
+    position: absolute;
+    left: 72px;
+
+}
+
+.button-check {
+    position: absolute;
+    left: 21px;
+    width: 32px;
+    height: 32px;
+    background-image: url(./public/img/uncheck-button.png);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: none;
+    outline-style: none;
+}
+
+.button-check:checked {
+    position: absolute;
+    left: 21px;
+    width: 32px;
+    height: 32px;
+    background-image: url(./public/img/check-button.svg);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: none;
+    outline-style: none;
+}
+
+
