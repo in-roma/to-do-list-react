@@ -8,7 +8,7 @@ class Taskfield extends React.Component {
           list: []
         };
       }
-      changeHandel = (e) => {
+      change = (e) => {
         this.setState({ ...this.state, userInput: e.target.value.trim() });
         console.log("this is e.target.value", e.target.value);
       };
@@ -22,23 +22,28 @@ class Taskfield extends React.Component {
                 { id: this.state.list.length, title: userText, done: false },
               ],
             });
-            console.log(this.state);
     };
-    
+  
+      remove = (taskToRemove) => {
+          const newList = this.state.filter((item) => item.title !== taskToRemove);
+          this.setState({
+            list: newList
+          });
+      };
+      
     render() { 
-        
         return <React.Fragment>
                 <div className="add-to-section">
                       <div className="add-todo">
                           <div className="text-input">
-                              <input type="text" id="userText" value={this.state.userInput} onChange={this.changeHandel} placeholder="Type a task here and click + to add"/>
+                              <input type="text" id="userText" value={this.state.userInput} onChange={this.change} placeholder="Type a task here and click + to add"/>
                               <div className="underline"></div>
                           </div>
-                          <button className="buttonAdd" onClick={this.add} ><img src="./img/add-button.svg" alt=""/></button>
+                          <button className="buttonAdd" onClick={this.add} ><img src="./img/add-button.svg"/></button>
                       </div>
                 </div>
                       <div className="tasks"> 
-                          {this.state.list.map(item => <div className="divResult"><div className="tasksText">{item.title}</div></div>)}
+                          {this.state.list.map(item => <div className="divResult"><div className="tasksText">{item.title}</div><button onClick={this.remove} className="button-delete"><img src="./img/delete-button.svg"></img></button></div>)}
                       </div>
               </React.Fragment> 
     }
