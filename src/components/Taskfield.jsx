@@ -11,7 +11,6 @@ class Taskfield extends React.Component {
 
     render() { 
         this.changeHandel = (e) => {
-            console.log(e.target.value);
             this.setState({ userInput: e.target.value.trim() });
           };
 
@@ -25,7 +24,7 @@ class Taskfield extends React.Component {
                   ],
                 });
         };
-        console.log(this.userInput);
+        console.log(this.state.userInput);
 
         return <div className="add-to-section">
                     <div className="add-todo">
