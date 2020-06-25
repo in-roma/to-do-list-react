@@ -25,7 +25,9 @@ class Taskfield extends React.Component {
     };
   
       remove = (taskToRemove) => {
-          const newList = this.state.filter((item) => item.title !== taskToRemove);
+  
+          console.log("remove", taskToRemove);
+          const newList = this.state.list.filter((item) => item.id !== taskToRemove);
           this.setState({
             list: newList
           });
@@ -43,7 +45,8 @@ class Taskfield extends React.Component {
                       </div>
                 </div>
                       <div className="tasks"> 
-                          {this.state.list.map(item => <div className="divResult"><div className="tasksText">{item.title}</div><button onClick={this.remove} className="button-delete"><img src="./img/delete-button.svg"></img></button></div>)}
+    {this.state.list.map(item => <div key={item.id} className="divResult">
+        <div className="tasksText">{item.title}</div><button onClick={ () => this.remove(item.id)} className="button-delete"><img src="./img/delete-button.svg"></img></button></div>)}
                       </div>
               </React.Fragment> 
     }

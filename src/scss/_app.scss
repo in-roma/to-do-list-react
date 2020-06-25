@@ -98,28 +98,28 @@ body {
 
 }
 
-// .button-check {
-//     position: absolute;
-//     left: 21px;
-//     width: 32px;
-//     height: 32px;
-//     // background-image: url(./public/img/uncheck-button.png);
-//     background-repeat: no-repeat;
-//     border: none;
-//     background-color: none;
-//     outline-style: none;
-// }
+.button-check {
+    position: absolute;
+    left: 21px;
+    width: 32px;
+    height: 32px;
+// background-image: url(./public/img/uncheck-button.png);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: none;
+    outline-style: none;
+}
 
-// .button-check:checked {
-//     position: absolute;
-//     left: 21px;
-//     width: 32px;
-//     height: 32px;
-//     // background-image: url(./public/img/check-button.svg);
-//     background-repeat: no-repeat;
-//     border: none;
-//     background-color: none;
-//     outline-style: none;
-// }
+.button-check:checked {
+    position: absolute;
+    left: 21px;
+    width: 32px;
+    height: 32px;
+    // background-image: url(./public/img/check-button.svg);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: none;
+    outline-style: none;
+}
 
 
